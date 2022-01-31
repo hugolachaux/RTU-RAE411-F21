@@ -1,0 +1,144 @@
+<head>
+	<title>Homework</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/homework.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src ="js/homework.js">
+	</script>
+
+	<marquee id="h1"> *** Telecommunication Software Course *** </marquee>
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawCurveTypes);
+
+    function drawCurveTypes() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Data');
+      
+
+      data.addRows([
+        [11,2], [22, 4], [33, 1], [44,5]
+      ]);
+
+
+      var options = {
+        hAxis: {
+          title: 'X'
+        },
+        vAxis: {
+          title: 'Y'
+        },
+        series: {
+          1: {curveType: 'function'}
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
+      chart.draw(data, options);
+    }
+</script>
+
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable
+            ([['X', 'a', 'b', 'c'],
+              ['a', 77, null, null],
+              ['b', null, 46, null],
+              ['c', null, null, 91],
+
+        ]);
+
+        var options = {
+          legend: 'Score',
+          pointSize: 30,
+          series: {
+                0: { pointShape: 'circle' },
+                1: { pointShape: 'star' },
+                2: { pointShape: 'polygon' },
+          
+            }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+	<img  src ="tele3.jpg" />
+
+	<form id="form">
+		<fieldset id="fieldset">
+	<legend id="legend">Informations  </legend>
+	<table>
+		<tr>
+			<td id="i">Course :  411 </td>
+			
+		</tr>
+		<tr>
+			<td id="i">Year : 2021 </td>
+			
+		</tr>
+
+		<tr>
+			<td id="i">Some_Data : [ [11,2], [22, 4], [33, 1], [44,5] ]</td>
+			
+		</tr>
+
+		<tr>
+			<td id="i"> Scores : {"a":77, "b":46, "c":91} </td>
+			
+		</tr>
+
+
+
+
+
+	</table>
+
+	
+		<tr>
+        	<td><input type="submit" value="Register" id="button" onClick="control()"> </td>
+			<td><input type="submit" value="Cancel" id="button" onClick="control()"></td>
+		</tr>
+
+</fieldset>
+
+<fieldset id="fieldset">
+	<legend id="legend"> Data Representation  </legend>
+	<div id="chart_div2" style="width: 900px; height: 500px;"></div>
+</fieldset>
+
+<fieldset id="fieldset">
+	<legend id="legend"> Scores Representation  </legend>
+	<div id="chart_div" style="width: 900px; height: 500px;"></div>
+</fieldset>
+
+
+
+
+</body>
+	
+
+
+
+
